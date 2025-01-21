@@ -31,12 +31,10 @@
 
 
 FROM node:20 AS builder
-RUN mkdir /opt/server && \ 
-    npm install
 WORKDIR /opt/server
 COPY package.json . && \
      *.js .
-
+RUN npm install
 
 FROM node:20
 EXPOSE 8080  
