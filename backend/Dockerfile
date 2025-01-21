@@ -32,8 +32,8 @@
 
 FROM node:20 AS builder
 WORKDIR /opt/server
-COPY package.json . && \
-     *.js .
+COPY package.json . 
+COPY *.js .
 RUN npm install
 
 FROM node:20
