@@ -43,4 +43,5 @@ RUN mkdir /opt/server
 WORKDIR /opt/server
 COPY --from=builder /opt/server /opt/server
 #USER ngnix
-CMD ["node", "index.js"]  
+#CMD ["node", "index.js"]  
+CMD ["sleep", "1000"]
